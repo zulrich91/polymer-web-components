@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>GDG Buea</title>
+
+  <meta name="viewport" 
+  content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+  <script src="components/webcomponentsjs/webcomponents.js">
+  </script>
+
+  <link rel="import" href="components/font-roboto/roboto.html">
+
+  <link rel="import" href="components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="components/paper-tabs/paper-tabs.html">
+ <!--   -->
+
+<link rel="import" href="components/custom-components/gdgbuea-jumbotron/gdgbuea-jumbotron.html" />
+  
+  <link rel="import" href="components/custom-components/gdgbuea-calendar/gdgbuea-calendar.html" />
+  <link rel="import" href="components/custom-components/gdgbuea-partner/gdgbuea-partner.html" />
+  <link rel="import" href="components/custom-components/gdgbuea-organizer/gdgbuea-organizer.html" />
+
+
+  <style>
+  html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #EEEEEE;
+    font-family: 'RobotoDraft', sans-serif;
+  }
+
+  core-header-panel{
+    height: 100%;
+    overflow: auto;
+    -webkit-overfolow-scrolling:touch;
+  }
+
+  core-toolbar{
+    background: #E84A1C;
+    color: #fff;
+    padding-left: 50px;
+  }
+  #tabs{
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    text-transform: uppercase;
+  }
+  paper-tab a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+  }
+  @media (min-width: 481px) {
+    #tabs {
+      min-width: 200px;
+      
+    }
+    #contenue {
+      width: 100%;
+    }
+  }
+  /*#contenue div{
+    width: 75%;
+    height: 768px;
+    background-color: #aba;
+   text-align:  center;
+    margin: 50px auto;
+    padding-top: 250px;
+  }
+
+  mohamed
+      html,body{
+      margin: 0;
+      padding: 0;
+  }
+  body{
+      margin-top: 60px;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      background-color: white;
+  }
+   */
+
+   /* Momo +++++++++++++++++++++++++++++++++++++   */
+  .jumbogrp{
+      background-color: yellow;
+      width: 100%;
+      height: 300px;
+      margin: 0;
+      padding: 0px;
+      overflow: hidden;
+    }
+    #jumbotitle{
+      font-size: 47px;
+    }
+    #headgroup{
+      position: absolute;
+      z-index: 500;
+      background-color: rgba(20, 173, 75, 0.77);
+      top: 30%;
+      right: 5%;
+      height: auto;
+      width: 300px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      padding: 10px; 
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    .coverimg{
+      position: relative;
+      top: 0px;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .gdglogo{
+      width: 68px;
+    }
+    @media (min-width: 800px) {
+      .jumbogrp{
+        height: 500px;
+      }
+
+      #headgroup{
+      top: 50%;
+      right: 5%;
+      height: auto;
+      width: 400px;
+    }
+    
+
+    }
+      @media (max-width: 800px) {
+        .gdglogo{
+          width: 41px;
+        }   
+      }
+   
+  </style>
+
+</head>
+
+<body unresolved>
+
+<core-header-panel>
+  <core-toolbar>
+    <paper-tabs id="tabs" selected="0" >
+    <paper-tab><a href="#image" horizontal center-center layout><img src="images/logosmall.png"></a></paper-tab>
+    <paper-tab><a href="#home" horizontal center-center layout>Home</a></paper-tab>
+    <paper-tab><a href="#about" horizontal center-center layout>About</a></paper-tab>
+    <paper-tab><a href="#events" horizontal center-center layout>Events</a></paper-tab>
+    <paper-tab><a href="#join" horizontal center-center layout>Join</a></paper-tab>
+    <paper-tab><a href="#contact us" horizontal center-center layout>Contact Us</a></paper-tab>
+    <paper-tab><a href="#partners" horizontal center-center layout>Partners</a></paper-tab>
+    <paper-tab><a href="#resources" horizontal center-center layout>resources</a></paper-tab>
+    </paper-tabs>
+  </core-toolbar>
+<!-- main page -->
+<!-- this the post card code here -->
+
+<div id="contenue" >
+  <!-- <post-list show="all"></post-list>
+  <post-comment><input></input> </post-comment> -->
+  <div id="home" style="margin:50px">
+
+    <!-- Jumbo ======================-->
+
+    <H1></H1>
+    <div id="headgroup">
+      <div id="jumbotitle"><img src="images/gdglogo.png" class="gdglogo" />GDG Buea</div>
+      <i>The community that codes!</i>
+    </div>
+    <!--  --><img class="coverimg" src="images/blue.jpg" />
+
+    <!-- Jumbo ======================--> 
+   <hr/> 
+  <div id="about"  layout vertical center>
+    <gdgbuea-organizer link="https://plus.google.com/108196826772057594196/about
+" name="Isaac Kamga" role="Community Manager" image="images/isaac_kamga.jpg"></gdgbuea-organizer>
+    <gdgbuea-organizer link="https://plus.google.com/110533699479797828285/about
+" name="Otto Akama" role="Assistant Manager" image="images/paul.jpg"></gdgbuea-organizer>
+    <gdgbuea-organizer link="https://plus.google.com/u/0/107067841106289821727/about
+" name="Ngole Brinsley" role="Marketing Manager" image="images/ngole_brinsley.jpg"></gdgbuea-organizer>
+    <gdgbuea-organizer link="https://plus.google.com/102425594519879388722/about
+" name="Chick Delveri" role="Technical Manager" image="images/chick.jpg"></gdgbuea-organizer>
+  </div>
+  <hr/>
+  <div id="events">
+    <gdgbuea-calendar>
+    </gdgbuea-calendar>
+  </div>
+  <hr/>
+  <div id="join" layout vertical center>
+    <H1>Join Us</H1>
+    <ul>
+      <li>Click the "I'm a member" button on the <a href="https://developers.google.com/groups/chapter/100289274059280359416/">GDG Directory </a> </li>
+      <li>"Follow" us on <a href="http://plus.google.com/100289274059280359416">Google+</a></li>
+      <li>"Like" us on <a href="https://www.facebook.com/gdgbuea">facebook </a></li>
+      <li>Join our <a href="https://groups.google.com/forum/#!forum/gdgbuea">mailing list </a></li>
+
+      <li>Chat with us on IRC (#ublab on freenode server)</li>
+
+    </ul>
+
+  </div>
+  <hr/>
+  <div id="contact us" layout vertical center>
+    <H1>Contact Us</H1>
+
+    <ul>
+
+     <li> Call (+237) 674106297 </li>
+
+      <li>Write info [AT] gdgbuea [DOT] org</li>
+
+    </ul>
+
+  </div>
+  <hr/>
+  <div id="partners" layout vertical center>
+    <H1>Partners</H1>
+    <h3>Diamond sponsors</h3>
+    <gdgbuea-partner link="http://www.google.com/about/" logo="images/google.png" name="Google Inc"></gdgbuea-partner>
+
+    <!-- <gdgbuea-partner link="https://developers.google.com/" logo="images/gdg.png" name="Google Developers"></gdgbuea-partner> -->
+    <h3>Platinium Sponsor</h3>
+    <gdgbuea-partner link="http://activspaces.com" logo="images/active.png" name="Activspaces Tech Incubator"></gdgbuea-partner>
+    <h3>Gold sponsors</h3>
+    <gdgbuea-partner link="http://ubuea.cm/" logo="images/ub.png" name="University of Buea"></gdgbuea-partner>
+    <gdgbuea-partner link="http://uidb-cameroon.com/" logo="images/cuib.png" name="Catholic University Institute Of Buea"></gdgbuea-partner>
+  </div>
+  <hr/>
+  <div id="resources" layout vertical center>
+    <H1>Resources</H1>
+    <ul>
+   <h3> Are you a developer already ? Explore the wealth of developer tools available on;</h3>
+  <li>  <a href="https://developers.google.com/">Google Developers Site </a></li>
+  <li>  Watch Developer videos on  <a href="https://www.youtube.com/user/GoogleDevelopers">Youtube</a></li>
+  <li>  Get your hands dirty with <a href="http://polymer-project.org/">Material Design</a></li>
+  <li>  Interested in contributing to our site ? Fork our<a href=" https://github.com/Izakey/gdgbuea.org"> github repository </a> and push commits</li>
+
+  <h3>Interested in learning about computer programming ?</h3>
+   <li>  Learn How to code with <a href="www.code.org/learn">code.org</a></li>
+   <li>  Read Peter Norvig's <a href="http://norvig.com/21-days.html">Teach Yourself Programming in Ten Years</a></li>
+   <li>  Read Eric Raymond's <a href="http://www.catb.org/esr/faqs/hacker-howto.html">How To Become A Hacker</a></li>
+   <li>  Follow Larry Wall's interview on <a href="http://bigthink.com/videos/big-think-interview-with-larry-wall">5 programming languages everyone should learn</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container" layout vertical center>
+
+    
+</div>
+
+
+</core-header-panel>
+<!-- this is to switch from one tab to another -->
+<script>
+var tabs = document.querySelector('paper-tabs');
+var list = document.querySelector('post-list');
+
+tabs.addEventListener('core-select', function() {
+  list.show = tabs.selected;
+});
+</script>
+
+
+</body>
+
+</html>

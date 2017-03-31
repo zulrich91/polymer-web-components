@@ -1,0 +1,34 @@
+<link rel="import" href="../../polymer/polymer.html">
+
+<polymer-element name="gdgbuea-organizer" attributes="link name role image">
+  <template>
+
+    <style>
+
+    #organizer {
+      display: inline-block;
+  
+    }
+        
+    </style>
+<!-- one of the image tags -->
+    <div id="organizer">
+
+      <a href="{{link}}"> 
+
+        <img src="{{image}}" /> 
+        <p>{{name}}</p>
+        
+
+      </a>
+     <p>{{role}}</p>
+    </div>
+
+   <!-- <content></content> --> 
+  </template>
+
+  <script>
+  Polymer({});
+  </script>
+
+</polymer-element>
